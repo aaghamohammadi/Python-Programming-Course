@@ -51,6 +51,14 @@ class TestStack(unittest.TestCase):
         self.assertRaises(TypeError, self.st.push, 3.1)
         self.assertRaises(TypeError, self.st.push, True)
 
+    def test_top_non_empty_stack(self):
+        self.st.push(3)
+        self.st.push(10)
+        self.assertEqual(10, self.st.top())
+
+    def test_top_empty_stack(self):
+        self.assertRaises(IndexError, self.st.top)
+
 
 if __name__ == '__main__':
     unittest.main()

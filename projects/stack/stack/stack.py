@@ -23,6 +23,11 @@ class Stack:
             raise IndexError("The stack is empty")
         return self.__items.pop()
 
+    def top(self) -> int:
+        if self.is_empty():
+            raise IndexError("The stack is empty")
+        return self.__items[-1]
+
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}()"
 
