@@ -8,7 +8,7 @@ class Company:
 
     def __init__(self, lst: List[Employee] = None) -> None:
         self.__employee = []
-        if len(lst) > 0:
+        if lst:
             self.__employee.extend(lst)
 
     def add_employee(self, emp: Employee) -> None:
