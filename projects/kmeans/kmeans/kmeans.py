@@ -74,7 +74,7 @@ class KMeans(Generic[Point]):
             if len(cluster.points) == 0:
                 continue
             means: List[float] = []
-            for dimension in range(cluster.points[0].num_dimensions):
+            for _ in range(cluster.points[0].num_dimensions):
                 dimension_slice: List[float] = [p.dimensions[dimension] for p in cluster.points]
                 means.append(mean(dimension_slice))
             cluster.centroid = DataPoint(means)

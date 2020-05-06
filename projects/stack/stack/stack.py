@@ -11,7 +11,7 @@ class Stack:
         return len(self.__items) == self.CAPACITY
 
     def push(self, item: int) -> None:
-        if not type(item) == int:
+        if type(item) != int:
             raise TypeError("The item must be an integer")
         if not self.is_full():
             self.__items.append(item)
